@@ -1,5 +1,7 @@
 .chat {
   flex: 0.65;
+  display: flex;
+  flex-direction: column;
 }
 
 .chat__header {
@@ -27,4 +29,13 @@
   display: flex;
   justify-content: space-between;
   min-width: 100px;
+}
+
+.chat__body {
+  flex: 1;
+  background-image: url("https://user-images.githubusercontent.com/56193323/129403044-9412a6e8-728c-4a8e-b308-3b4ac9169172.jpg");
+  background-repeat: repeat;
+  background-position: center;
+  padding: 30px;
+  overflow: scroll;
 }
