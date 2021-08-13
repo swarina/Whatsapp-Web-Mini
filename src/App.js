@@ -1,10 +1,15 @@
 import React from "react";
 import "./App.css";
 
+//BEM Naming Convention
+
 function App() {
   return (
     <div className="app">
-      <h1>Hello World</h1>
+      <div className="app__body">
+        {/*SIDEBAR */}
+        {/* CHAT */}
+      </div>
     </div>
   );
 }
