@@ -1,5 +1,5 @@
 import React from "react";
-import SidebarChat from './SidebarChat';
+import SidebarChat from "./SidebarChat";
 
 //CSS
 import "./Sidebar.css";
@@ -43,8 +43,10 @@ function Sidebar() {
       {/* Chats */}
       <div className="sidebar__chats">
         <SidebarChat />
-        <h1>Sidebar Chat</h1>
-
+        <SidebarChat />
+        <SidebarChat />
+        <SidebarChat />
+        <SidebarChat />
       </div>
     </div>
   );
