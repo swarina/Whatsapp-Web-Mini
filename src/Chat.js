@@ -8,6 +8,8 @@ import { Avatar, IconButton } from "@material-ui/core";
 import AttachFileIcon from "@material-ui/icons/AttachFile";
 import MoreVertIcon from "@material-ui/icons/MoreVert";
 import SearchOutlinedIcon from "@material-ui/icons/SearchOutlined";
+import InsertEmoticonIcon from "@material-ui/icons/InsertEmoticon";
+import MicIcon from "@material-ui/icons/Mic";
 
 function Chat() {
   const [seed, setSeed] = useState("");
@@ -51,7 +53,16 @@ function Chat() {
       </div>
 
       {/* Chat Text Area */}
-      <div className="chat__footer"></div>
+      <div className="chat__footer">
+        <InsertEmoticonIcon />
+        <form>
+          <input type="text" placeholder="Type a message" />
+          <button type="submit">
+            Send a message
+          </button>
+        </form>
+        <MicIcon />
+      </div>
     </div>
   );
 }
