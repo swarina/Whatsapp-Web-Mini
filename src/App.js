@@ -10,10 +10,12 @@ import Login from "./Login";
 //React-Router
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
+import { useStateValue } from "./StateProvider";
+
 //BEM Naming Convention
 
 function App() {
-  const [user, setUser] = useState(null);
+  const [{ user }, dispatch] = useStateValue();
 
   return (
     <div className="app">
