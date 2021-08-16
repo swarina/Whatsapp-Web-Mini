@@ -21,14 +21,16 @@ function SidebarChat({ id, name, addNewChat }) {
   }, []);
 
   useEffect(() => {
-    db.collection("rooms")
-      .doc(id)
-      .collection("messages")
-      .orderBy("timestamp", "desc")
-      .onSnapshot((snapshot) =>
-        setMessages(snapshot.docs.map((doc) => doc.data()))
-      );
-  });
+    if (id) {
+      db.collection("rooms")
+        .doc(id)
+        .collection("messages")
+        .orderBy("timestamp", "desc")
+        .onSnapshot((snapshot) =>
+          setMessages(snapshot.docs.map((doc) => doc.data()))
+        );
+    }
+  }, [id]);
 
   const createChat = () => {
     const roomName = prompt("Please enter name for chat room");
